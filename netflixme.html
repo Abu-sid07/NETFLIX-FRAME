@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Netflix</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .main img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(25%);
+        }
+        .log1 {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+        .log1 img {
+            width: 250px;
+        }
+        .s2 {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .s3 {
+            position: absolute;
+            top: 90%;
+            left: 40%;
+        }
+        .s3 input {
+            width: 700px;
+            height: 45px;
+            background-color: rgba(0, 0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: 2px solid silver;
+            border-radius: 5px;
+            font-size: xx-large;
+            
+            
+        }
+        .s3 input::placeholder {
+            font-size:large;
+            color: #cecece;
+        }
+        .s3 button {
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            border: 3px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .s4 {
+            position: absolute;
+            top: 10px;
+            left: 85%;
+        }
+        .s4 select {
+            width: 120px;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            font-size: large;
+        }
+        .s4 button {
+            width: 120px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            font-size: large;
+            cursor: pointer;
+        }
+        .main2 {
+            width: 100%;
+            height: 1200px;
+            background-color: rgb(0, 0, 0);
+            margin: 0px;
+            position: relative;
+        }
+        .m1 {
+            position: relative;
+            width: 50%;
+            left: 35%;
+            background-color: rgba(255, 255, 255, 0.3);
+            height: 100px;
+            top: 50px;
+            border-radius: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            color: white;
+        }
+        .m1:hover {
+            transform: scale(1.05);
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+        }
+        #n {
+            position: absolute;
+        }
+        #n1 {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+        }
+        #n1 img {
+            width: 150px;
+            height: 100px;
+            left: 0%;
+        }
+        #n2 {
+            position: absolute;
+            color: azure;
+            top: 25px;
+            left: 20%;
+            font-size: large;
+        }
+        #n2 h3, p {
+            margin: 0px;
+        }
+        #n3 {
+            position: absolute;
+            top: 20px;
+            left: 80%;
+        }
+        #n3 button {
+            width: 150px;
+            height: 50px;
+            font-size: larger;
+            border-radius: 30px;
+            border: 3px solid black;
+            cursor: pointer;
+        }
+        .r1 {
+            position: relative;
+        }
+        .r1 img {
+            width: 300px;
+            border-radius: 20px;
+        }
+       
+        .main3 {
+            position: absolute;
+            left: 400px;
+            top: 1300px;
+        }
+        .main3 td {
+            padding: 30PX;
+            top: auto;
+        }
+        #z {
+            transition: transform 0.3s ease;
+        }
+        #z:hover {
+            transform: scale(1.2);
+        }
+       
+        .main5{
+            font-family: sans-serif;
+            background-color: #141414;
+            color: #fff;
+
+        }
+        .main6{
+           
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        .row{
+                display: flex;
+                flex-wrap: wrap;
+                height: 500px;
+                
+            }
+            .contain{
+                flex: 20%;
+                padding: 20px;
+                text-align:center;
+                background-color: grey;
+                border-radius: 20px;
+                height: 400px;
+                font-size:  xx-large;
+              margin-right:25px;
+            }
+            .contain:hover{
+                transform: scale(1.05);
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+            }
+        .main7{
+           
+            width: auto;
+            background-color: #141414;
+            font-size: xx-large;
+            font-family:sans-serif ;
+           
+        }
+        .fq{
+            padding: 30px;
+            margin: 20px;
+            border: 3px solid black;
+            border-radius: 20px;
+            font-weight: 400;
+            background-color: grey;
+            
+        }
+        .fq:hover{
+            transform: scale(1);
+            cursor: pointer;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg" alt="no image" style="filter: brightness(90%);">
+    </div>
+    <div class="log1">
+        <img src="https://images.ctfassets.net/y2ske730sjqp/6bhPChRFLRxc17sR8jgKbe/6fa1c6e6f37acdc97ff635cf16ba6fb3/Logos-Readability-Netflix-logo.png" alt="">
+    </div>
+    <div class="s2">
+        <h1>Unlimited movies,</h1>
+        <h1>TV shows and more</h1>
+        <p>Starts at ₹149. Cancel anytime.</p>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+    </div>
+    <div class="s3">
+        <table>
+            <tr>
+                <td><input type="email" name="email" id="" placeholder="  ENTER YOUR EMAIL" required></td>
+                <td>
+                    <a href="https://www.netflix.com/in/"><button>GET START</button></td></a>
+            </tr>
+        </table>
+    </div>
+    <div class="s4">
+        <table>
+            <tr>
+                <td>
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Malayalam">Malayalam</option>
+                    </select>
+                </td>
+                <td>
+                    <a href="login netflix.html"><button>Sign In</button></td></a>
+            </tr>
+        </table>
+    </div>
+    <div class="main2">
+        <div class="m1" id="n">
+            <div id="n1">
+                <img src="https://static.vecteezy.com/system/resources/previews/009/350/765/original/3d-food-icons-popcorn-big-size-png.png" alt="" width="180px" height="100px">
+            </div>
+            <div id="n2">
+                <h3>The Netflix you love for just US$6.99.</h3>
+                <p>Get our most affordable, advert-supported plan.</p>
+            </div>
+            <div id="n3">
+                <button>Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div class="main3">
+        <table>
+            <tr>
+                <td>
+                    <div class="r1" id="z">
+                      <a href="https://youtu.be/sosVfruR9bY?si=0MOmdyyooD9_SDsX">  <img src="IMG/download (2).jpg" alt=""></a>
+                    </div>
+                </td>
+                <td>
+                    <div class="r1" id="z">
+                        <img src="IMG/ff0fa204-f764-404e-88f3-59c170166905.jpg" alt="">
+                    </div>
+                </td>
+                <td>
+                    <div class="r1" id="z">
+                     <img src="IMG/typography.jpg" alt="" >
+                    </div>
+                </td>
+                <td>
+                    <div class="r1" id="z">
+                        <img src="  IMG/download (1).jpg" alt="">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+    <div class="main5">
+    <div class="main6">
+        <h1>More reasons to join</h1>
+        <div class="row">
+        <div class="contain">
+       <h3>Enjoy on your TV</h3>
+        Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+       </div>
+
+       <div class="contain"> <h3>Download your shows to watch offline</h3>
+        <p>Save your favourites easily and always <br>have something to watch.</p>
+    </div>
+    <div class="contain">
+       <h3> Watch everywhere</h3>
+        <p>Stream unlimited movies and TV shows on your phone, <br>tablet, laptop and TV.</p>
+    </div>
+    <div class="contain">
+        <h3>Create profiles for kids</h3>   
+        <p>Send kids on adventures with their favouritebr
+             characters in a space made just for them — free with your membership.</p>
+    </div>
+    </div>
+    <div class="main7">
+        <h3>Frequently Asked Questions</h3>
+        <table>
+            <tr><details class="fq">
+                <summary>What is Netflix ?</summary>
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+                    You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </details> </tr>
+                <tr><details class="fq">
+                    <summary>How Much Does Netflix Cost?</summary>
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, 
+                    all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p></details> </tr>
+                    <tr><details class="fq">
+                        <summary>Where Can I Watch ?</summary>
+                        <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                            You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                        </details> </tr>
+
+                        <tr><details class="fq">
+                           <summary>Who To I Cancel</summary>
+                            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                            </details> </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
